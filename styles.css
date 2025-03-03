@@ -1,0 +1,186 @@
+/* Material You Theme Inspired by Google's Material You Design System */
+:root {
+    --primary: #6750A4;
+    --secondary: #4A408E;
+    --background: #F8F9FA;
+    --text-dark: #1D1B20;
+    --text-light: white;
+    --hover: #D0BCFF;
+    --active-pill: #D0BCFF; /* Highlight color */
+    --home-bg: #EADDFF; /* Restored Home Page BG */
+    --contact-bg: #D1C4E9; /* Restored Contact Page BG */
+    --panel-bg: rgba(103, 80, 164, 0.9); /* Adaptive Panel BG */
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background: var(--secondary);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Container */
+.nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Brand */
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* Menu Icon (Hidden by Default) */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* Pill-shaped overlay */
+.nav-indicator {
+    position: absolute;
+    bottom: -5px;
+    height: 32px;
+    background: var(--active-pill);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+/* Menu Items */
+.nav-item {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 18px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover Effect */
+.nav-item:hover {
+    background: var(--hover);
+    color: var(--text-dark);
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: var(--panel-bg); /* Adaptive Panel BG */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden initially */
+        padding: 20px;
+        transition: right 0.4s ease-in-out;
+        backdrop-filter: blur(12px);
+        border-left: 2px solid var(--secondary);
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in */
+    }
+
+    .nav-links.inactive {
+        right: -100%;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+    }
+
+    .nav-item {
+        display: block;
+        padding: 14px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    /* Mobile pill indicator */
+    .nav-indicator {
+        width: 100%;
+        height: 40px;
+        bottom: auto;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* Sections - Full Page */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--background);
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Home Section (Restored BG) */
+#home {
+    background: var(--home-bg);
+}
+
+/* Contact Section (Restored BG) */
+#contact {
+    background: var(--contact-bg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--text-light);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy InfoTech WebDev Project-1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">My Website</a>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item" onclick="smoothScroll('#home')">Home</a></li>
+                <li><a href="#about" class="nav-item" onclick="smoothScroll('#about')">About</a></li>
+                <li><a href="#services" class="nav-item" onclick="smoothScroll('#services')">Services</a></li>
+                <li><a href="#contact" class="nav-item" onclick="smoothScroll('#contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="home" class="section home">
+        <div class="content">
+            <h1>Welcome to My Website</h1>
+            <p>Explore and enjoy the experience!</p>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We create amazing web experiences.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <div class="content">
+            <h2>Our Services</h2>
+            <p>We offer top-notch digital solutions.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Reach out for collaborations and inquiries.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
